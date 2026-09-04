@@ -1,0 +1,1934 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>METALUX_PAGE | Calidad y Precisión</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7fa;
+            color: #172033;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: white;
+            border-bottom: 1px solid #e5eaf0;
+            box-shadow: 0 3px 15px rgba(0,0,0,.06);
+        }
+
+        .nav {
+            max-width: 1200px;
+            margin: auto;
+            padding: 12px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 22px;
+            font-weight: 900;
+            color: #12345b;
+        }
+
+        .logo img {
+            width: 58px;
+            height: 58px;
+            object-fit: contain;
+        }
+
+        .logo span {
+            color: #f28c28;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav a {
+            font-weight: bold;
+            color: #26364d;
+            transition: .3s;
+        }
+
+        nav a:hover {
+            color: #f28c28;
+        }
+
+        .nav-btn {
+            background: #f28c28;
+            color: white !important;
+            padding: 11px 18px;
+            border-radius: 8px;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 650px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #081c35, #12345b);
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            width: 100%;
+            margin: auto;
+            padding: 80px 25px;
+            color: white;
+        }
+
+        .hero-logo {
+            width: 170px;
+            height: 170px;
+            object-fit: contain;
+            margin-bottom: 25px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 8px 15px;
+            border: 1px solid #f28c28;
+            background: rgba(242,140,40,.15);
+            border-radius: 30px;
+            color: #ffb45c;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            max-width: 850px;
+            font-size: clamp(40px, 6vw, 72px);
+            line-height: 1.05;
+            margin-bottom: 25px;
+            font-weight: 900;
+        }
+
+        h1 span {
+            color: #f28c28;
+        }
+
+        .hero p {
+            max-width: 650px;
+            font-size: 20px;
+            color: #e5edf7;
+            margin-bottom: 32px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 24px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: .3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            background: #f28c28;
+            color: white !important;
+        }
+
+        .btn-light {
+            background: white;
+            color: #12345b;
+        }
+
+        /* ================= GENERAL ================= */
+
+        section {
+            padding: 85px 25px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-head {
+            text-align: center;
+            max-width: 760px;
+            margin: 0 auto 50px;
+        }
+
+        .tag {
+            color: #f28c28;
+            font-size: 14px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .section-head h2,
+        .about h2 {
+            font-size: clamp(32px, 5vw, 48px);
+            line-height: 1.15;
+            color: #12345b;
+            margin-bottom: 15px;
+        }
+
+        .section-head p,
+        .about p {
+            color: #667085;
+            font-size: 17px;
+        }
+
+        /* ================= NOSOTROS ================= */
+
+        .about {
+            background: white;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-logo {
+            min-height: 420px;
+            border-radius: 20px;
+            background: #f5f8fc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 45px;
+            box-shadow: 0 20px 50px rgba(18,52,91,.12);
+        }
+
+        .about-logo img {
+            width: min(100%, 380px);
+            height: 380px;
+            object-fit: contain;
+        }
+
+        .about h2 span {
+            color: #f28c28;
+        }
+
+        .about ul {
+            list-style: none;
+            margin-top: 25px;
+        }
+
+        .about li {
+            margin: 12px 0;
+            font-weight: bold;
+            color: #334155;
+        }
+
+        .about li::before {
+            content: "✓";
+            color: #f28c28;
+            font-weight: 900;
+            margin-right: 10px;
+        }
+
+        /* ================= SERVICIOS ================= */
+
+        .services {
+            background: #f5f8fc;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #e5eaf0;
+            border-radius: 15px;
+            padding: 30px;
+            transition: .3s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(18,52,91,.12);
+            border-color: #f28c28;
+        }
+
+        .icon {
+            width: 55px;
+            height: 55px;
+            background: #fff1e4;
+            color: #f28c28;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 27px;
+            margin-bottom: 18px;
+        }
+
+        .card h3 {
+            color: #12345b;
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #667085;
+        }
+
+        /* ================= CATALOGO ================= */
+
+        .catalog {
+            background: white;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .product {
+            background: white;
+            border: 1px solid #e3e8ee;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: .3s;
+        }
+
+        .product:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 18px 40px rgba(18,52,91,.13);
+        }
+
+        .product img {
+            width: 100%;
+            height: 280px;
+            object-fit: contain;
+            background: #f5f7fa;
+            padding: 15px;
+        }
+
+        .product-info {
+            padding: 23px;
+        }
+
+        .product-info h3 {
+            color: #12345b;
+            font-size: 21px;
+            margin-bottom: 7px;
+        }
+
+        .price {
+            color: #f28c28;
+            font-size: 24px;
+            font-weight: 900;
+            margin-bottom: 12px;
+        }
+
+        .product-info p {
+            color: #667085;
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+
+        .whatsapp {
+            display: block;
+            text-align: center;
+            background: #12345b;
+            color: white;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: .3s;
+        }
+
+        .whatsapp:hover {
+            background: #f28c28;
+        }
+
+        /* ================= POR QUE ELEGIRNOS ================= */
+
+        .why {
+            background: #12345b;
+            color: white;
+        }
+
+        .why .section-head h2 {
+            color: white;
+        }
+
+        .why .section-head p {
+            color: #cbd7e5;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 18px;
+        }
+
+        .why-card {
+            background: rgba(255,255,255,.08);
+            border: 1px solid rgba(255,255,255,.12);
+            border-radius: 14px;
+            padding: 25px 18px;
+            text-align: center;
+        }
+
+        .why-card .icon {
+            margin: 0 auto 15px;
+            background: transparent;
+            font-size: 32px;
+        }
+
+        .why-card h3 {
+            color: #ffad52;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .why-card p {
+            color: #d7e0eb;
+            font-size: 14px;
+        }
+
+        /* ================= PUBLICAR PRODUCTO ================= */
+
+        .publish {
+            background: #f5f8fc;
+        }
+
+        .form-box {
+            background: white;
+            border-radius: 20px;
+            padding: 45px;
+            box-shadow: 0 15px 40px rgba(18,52,91,.08);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .full {
+            grid-column: 1 / -1;
+        }
+
+        label {
+            font-weight: bold;
+            color: #334155;
+            margin-bottom: 7px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 13px 15px;
+            border: 1px solid #d7dee8;
+            border-radius: 8px;
+            font: inherit;
+            outline: none;
+            background: white;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #f28c28;
+            box-shadow: 0 0 0 3px rgba(242,140,40,.1);
+        }
+
+        textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        .note {
+            margin-top: 20px;
+            padding: 15px;
+            background: #fff7ed;
+            border-left: 4px solid #f28c28;
+            color: #7c4a16;
+            border-radius: 5px;
+        }
+
+        /* ================= CONTACTO ================= */
+
+        .contact {
+            background: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: .9fr 1.1fr;
+            gap: 45px;
+        }
+
+        .contact-info {
+            background: #12345b;
+            color: white;
+            padding: 40px;
+            border-radius: 18px;
+        }
+
+        .contact-info h2 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .contact-info > p {
+            color: #d3deeb;
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            margin-bottom: 25px;
+        }
+
+        .contact-item strong {
+            display: block;
+            color: #ffad52;
+            margin-bottom: 5px;
+        }
+
+        .contact-item span {
+            color: #e5edf7;
+        }
+
+        .contact-form {
+            padding: 35px;
+            border: 1px solid #e3e8ee;
+            border-radius: 18px;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #081c35;
+            color: white;
+            padding: 45px 25px 25px;
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        .footer-logo {
+            font-size: 25px;
+            font-weight: 900;
+            margin-bottom: 15px;
+        }
+
+        .footer-logo span {
+            color: #f28c28;
+        }
+
+        footer p {
+            color: #aebdce;
+        }
+
+        .footer-col h3 {
+            margin-bottom: 15px;
+            color: #ffad52;
+        }
+
+        .footer-col a {
+            display: block;
+            color: #c5d1df;
+            margin-bottom: 8px;
+        }
+
+        .footer-col a:hover {
+            color: #f28c28;
+        }
+
+        .copy {
+            max-width: 1200px;
+            margin: 35px auto 0;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,.1);
+            text-align: center;
+            color: #8798ad;
+            font-size: 14px;
+        }
+
+        /* ================= WHATSAPP ================= */
+
+        .float-wa {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            z-index: 999;
+            width: 62px;
+            height: 62px;
+            border-radius: 50%;
+            background: #25d366;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            box-shadow: 0 7px 25px rgba(0,0,0,.2);
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media(max-width: 1000px) {
+
+            .services-grid,
+            .products {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .why-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media(max-width: 750px) {
+
+            .nav {
+                flex-direction: column;
+            }
+
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid,
+            .products {
+                grid-template-columns: 1fr;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .full {
+                grid-column: auto;
+            }
+
+            .form-box {
+                padding: 25px;
+            }
+        }
+
+        @media(max-width: 480px) {
+
+            section {
+                padding: 65px 18px;
+            }
+
+            .hero-content {
+                padding: 60px 18px;
+            }
+
+            .hero-logo {
+                width: 130px;
+                height: 130px;
+            }
+
+            h1 {
+                font-size: 40px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+    <div class="nav">
+
+        <a href="#inicio" class="logo">
+            <img src="./Imagenes/Logo.png" alt="Logo METALUX_PAGE">
+            <div>
+                METALUX<span>_PAGE</span>
+            </div>
+        </a>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#catalogo">Catálogo</a>
+            <a href="#porque">¿Por qué elegirnos?</a>
+            <a href="#contacto" class="nav-btn">Contáctanos</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<!-- ================= INICIO ================= -->
+
+<section class="hero" id="inicio">
+
+    <div class="hero-content">
+
+        <img
+            src="./Imagenes/Logo.png"
+            alt="Logo METALUX_PAGE"
+            class="hero-logo"
+        >
+
+        <div class="badge">
+            METALUX_PAGE
+        </div>
+
+        <h1>
+            DIGITALIZANDO FUTURO
+            <span>CON CALIDAD Y PRECISIÓN</span>
+        </h1>
+
+        <p>
+            Fabricamos productos metálicos combinando diseño,
+            resistencia y acabados profesionales para ofrecer
+            soluciones duraderas.
+        </p>
+
+        <div class="buttons">
+
+            <a href="#catalogo" class="btn btn-primary">
+                Ver catálogo
+            </a>
+
+            <a href="#servicios" class="btn btn-light">
+                Conocer servicios
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= NOSOTROS ================= -->
+
+<section class="about" id="nosotros">
+
+    <div class="container">
+
+        <div class="about-grid">
+
+            <div class="about-logo">
+
+                <img
+                    src="./Imagenes/Logo.png"
+                    alt="METALUX_PAGE"
+                >
+
+            </div>
+
+            <div>
+
+                <div class="tag">
+                    Sobre nosotros
+                </div>
+
+                <h2>
+                    Fabricamos con
+                    <span>precisión</span>
+                </h2>
+
+                <p>
+                    Bienvenido a METALUX_PAGE.
+                    Nos especializamos en la fabricación
+                    de productos metálicos de alta calidad,
+                    combinando diseño, resistencia y
+                    acabados profesionales.
+                </p>
+
+                <br>
+
+                <p>
+                    Ofrecemos soluciones duraderas para
+                    hogares, negocios y proyectos personalizados.
+                </p>
+
+                <ul>
+                    <li>Productos metálicos de calidad</li>
+                    <li>Fabricación personalizada</li>
+                    <li>Acabados profesionales</li>
+                    <li>Atención personalizada</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SERVICIOS ================= -->
+
+<section class="services" id="servicios">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <div class="tag">
+                Lo que hacemos
+            </div>
+
+            <h2>
+                Nuestros Servicios
+            </h2>
+
+            <p>
+                Soluciones metálicas diseñadas para brindar
+                eficiencia, resistencia y resultados duraderos.
+            </p>
+
+        </div>
+
+
+        <div class="services-grid">
+
+            <div class="card">
+
+                <div class="icon">⚒️</div>
+
+                <h3>
+                    Soldadura
+                </h3>
+
+                <p>
+                    Trabajo preciso y resistente
+                    para estructuras y reparaciones.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">✂️</div>
+
+                <h3>
+                    Corte de Metales
+                </h3>
+
+                <p>
+                    Procesos limpios y exactos
+                    para acabados profesionales.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">🔩</div>
+
+                <h3>
+                    Hojalatería y Soldadura
+                </h3>
+
+                <p>
+                    Fabricaciones a medida según
+                    tus necesidades y proyectos.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">⚙️</div>
+
+                <h3>
+                    Mantenimiento de Maquinaria Industrial
+                </h3>
+
+                <p>
+                    Servicio técnico orientado a
+                    rendimiento, seguridad y durabilidad.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">📐</div>
+
+                <h3>
+                    Fabricaciones Personalizadas
+                </h3>
+
+                <p>
+                    Diseñamos soluciones adaptadas
+                    a los requerimientos de cada cliente.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">🏭</div>
+
+                <h3>
+                    Soluciones Industriales
+                </h3>
+
+                <p>
+                    Productos y trabajos metálicos
+                    pensados para diferentes necesidades.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CATALOGO ================= -->
+
+<section class="catalog" id="catalogo">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <div class="tag">
+                METALUX_PAGE
+            </div>
+
+            <h2>
+                Colección Exclusiva
+            </h2>
+
+            <p>
+                Descubre nuestra selección de productos metálicos.
+            </p>
+
+        </div>
+
+
+        <div class="products">
+
+
+            <!-- CAJA CHINA -->
+
+            <div class="product">
+
+                <img
+                    src="./Imagenes/Caja China.png"
+                    alt="Caja China"
+                >
+
+                <div class="product-info">
+
+                    <h3>
+                        🔧 CAJA CHINA
+                    </h3>
+
+                    <div class="price">
+                        S/ 230.00
+                    </div>
+
+                    <p>
+                        Caja China de acero inoxidable
+                        premium, ideal para asados.
+                    </p>
+
+                    <a
+                        class="whatsapp"
+                        target="_blank"
+                        href="https://wa.me/51951719594?text=Hola%20METALUX_PAGE,%20estoy%20interesado%20en%20la%20Caja%20China."
+                    >
+                        Solicitar por WhatsApp
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- CAÑON COLONIAL -->
+
+            <div class="product">
+
+                <img
+                    src="./Imagenes/Cañol Colonial.png"
+                    alt="Cañón Colonial"
+                >
+
+                <div class="product-info">
+
+                    <h3>
+                        🎖️ CAÑÓN COLONIAL
+                    </h3>
+
+                    <div class="price">
+                        S/ 55.00
+                    </div>
+
+                    <p>
+                        Pieza decorativa hecha a mano
+                        con detalles de estilo colonial.
+                    </p>
+
+                    <a
+                        class="whatsapp"
+                        target="_blank"
+                        href="https://wa.me/51951719594?text=Hola%20METALUX_PAGE,%20estoy%20interesado%20en%20el%20Cañón%20Colonial."
+                    >
+                        Solicitar por WhatsApp
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARRITO VERDULERO -->
+
+            <div class="product">
+
+                <img
+                    src="./Imagenes/Carrito Verdulero.png"
+                    alt="Carrito Verdulero"
+                >
+
+                <div class="product-info">
+
+                    <h3>
+                        🛒 CARRITO VERDULERO
+                    </h3>
+
+                    <div class="price">
+                        S/ 150.00
+                    </div>
+
+                    <p>
+                        Carrito funcional y resistente
+                        para organizar y transportar productos.
+                    </p>
+
+                    <a
+                        class="whatsapp"
+                        target="_blank"
+                        href="https://wa.me/51951719594?text=Hola%20METALUX_PAGE,%20estoy%20interesado%20en%20el%20Carrito%20Verdulero."
+                    >
+                        Solicitar por WhatsApp
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- PARRILLA -->
+
+            <div class="product">
+
+                <img
+                    src="./Imagenes/Parrilla.png"
+                    alt="Parrilla"
+                >
+
+                <div class="product-info">
+
+                    <h3>
+                        🔥 PARRILLA
+                    </h3>
+
+                    <div class="price">
+                        S/ 220.00
+                    </div>
+
+                    <p>
+                        Parrilla robusta fabricada
+                        con materiales de alta calidad.
+                    </p>
+
+                    <a
+                        class="whatsapp"
+                        target="_blank"
+                        href="https://wa.me/51951719594?text=Hola%20METALUX_PAGE,%20estoy%20interesado%20en%20la%20Parrilla."
+                    >
+                        Solicitar por WhatsApp
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- SILUETA NAVIDEÑA -->
+
+            <div class="product">
+
+                <img
+                    src="./Imagenes/Silueta Navideña.jpeg"
+                    alt="Silueta Navideña"
+                >
+
+                <div class="product-info">
+
+                    <h3>
+                        ✨ SILUETA NAVIDEÑA
+                    </h3>
+
+                    <div class="price">
+                        Desde S/ 70.00
+                    </div>
+
+                    <p>
+                        Decoración metálica ideal
+                        para temporadas festivas.
+                    </p>
+
+                    <a
+                        class="whatsapp"
+                        target="_blank"
+                        href="https://wa.me/51951719594?text=Hola%20METALUX_PAGE,%20estoy%20interesado%20en%20la%20Silueta%20Navideña."
+                    >
+                        Solicitar por WhatsApp
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- RECOGEDOR METALICO -->
+
+            <div class="product">
+
+                <img
+                    src="./Imagenes/Recogedor Metalico.png"
+                    alt="Recogedor Metálico"
+                >
+
+                <div class="product-info">
+
+                    <h3>
+                        🧹 RECOGEDOR METÁLICO
+                    </h3>
+
+                    <div class="price">
+                        S/ 40.00
+                    </div>
+
+                    <p>
+                        Recogedor profesional resistente
+                        para uso diario.
+                    </p>
+
+                    <a
+                        class="whatsapp"
+                        target="_blank"
+                        href="https://wa.me/51951719594?text=Hola%20METALUX_PAGE,%20estoy%20interesado%20en%20el%20Recogedor%20Metálico."
+                    >
+                        Solicitar por WhatsApp
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= POR QUE ELEGIRNOS ================= -->
+
+<section class="why" id="porque">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <div class="tag">
+                Nuestra diferencia
+            </div>
+
+            <h2>
+                ¿Por qué elegirnos?
+            </h2>
+
+            <p>
+                Nos enfocamos en entregar productos
+                y servicios que realmente aporten valor.
+            </p>
+
+        </div>
+
+
+        <div class="why-grid">
+
+
+            <div class="why-card">
+
+                <div class="icon">
+                    ⭐
+                </div>
+
+                <h3>
+                    Calidad Premium
+                </h3>
+
+                <p>
+                    Materiales de calidad para garantizar
+                    durabilidad y resistencia.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="icon">
+                    ✨
+                </div>
+
+                <h3>
+                    Acabados Profesionales
+                </h3>
+
+                <p>
+                    Precisión y excelencia
+                    en cada detalle.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="icon">
+                    🤝
+                </div>
+
+                <h3>
+                    Atención Personalizada
+                </h3>
+
+                <p>
+                    Soluciones adaptadas a las
+                    necesidades de cada cliente.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="icon">
+                    💰
+                </div>
+
+                <h3>
+                    Precios Competitivos
+                </h3>
+
+                <p>
+                    Buena relación calidad-precio.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="icon">
+                    🚚
+                </div>
+
+                <h3>
+                    Puntualidad
+                </h3>
+
+                <p>
+                    Respetamos los plazos acordados
+                    para cada pedido.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PUBLICAR PRODUCTO ================= -->
+
+<section class="publish" id="publica">
+
+    <div class="container">
+
+        <div class="form-box">
+
+            <div
+                class="section-head"
+                style="text-align:left;margin-left:0"
+            >
+
+                <div class="tag">
+                    Para emprendedores
+                </div>
+
+                <h2>
+                    Publica tu Producto
+                </h2>
+
+                <p>
+                    Completa el formulario y envíanos
+                    los datos por WhatsApp.
+                </p>
+
+            </div>
+
+
+            <form id="publishForm">
+
+                <div class="form-grid">
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Nombre completo
+                        </label>
+
+                        <input
+                            id="nombre"
+                            type="text"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Correo electrónico
+                        </label>
+
+                        <input
+                            id="correo"
+                            type="email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Número de WhatsApp
+                        </label>
+
+                        <input
+                            id="whatsapp"
+                            type="tel"
+                            placeholder="+51"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Nombre del producto
+                        </label>
+
+                        <input
+                            id="producto"
+                            type="text"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Categoría
+                        </label>
+
+                        <select id="categoria" required>
+
+                            <option value="">
+                                Seleccionar categoría
+                            </option>
+
+                            <option>
+                                Hojalatería
+                            </option>
+
+                            <option>
+                                Soldadura
+                            </option>
+
+                            <option>
+                                Decoración
+                            </option>
+
+                            <option>
+                                Accesorios
+                            </option>
+
+                            <option>
+                                Otro
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Precio en soles
+                        </label>
+
+                        <input
+                            id="precio"
+                            type="number"
+                            min="0"
+                            step="0.01"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group full">
+
+                        <label>
+                            Descripción
+                        </label>
+
+                        <textarea
+                            id="descripcion"
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="form-group full">
+
+                        <label>
+                            Ubicación
+                        </label>
+
+                        <input
+                            id="ubicacion"
+                            type="text"
+                            placeholder="Ciudad / Región"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="note">
+
+                    <strong>Importante:</strong>
+                    Si el producto cumple con nuestros
+                    criterios de calidad, podrá ser publicado
+                    en el catálogo.
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn btn-primary"
+                    style="margin-top:25px"
+                >
+                    Enviar producto por WhatsApp
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACTO ================= -->
+
+<section class="contact" id="contacto">
+
+    <div class="container">
+
+        <div class="contact-grid">
+
+
+            <div class="contact-info">
+
+                <div class="tag">
+                    Hablemos
+                </div>
+
+                <h2>
+                    Contáctanos
+                </h2>
+
+                <p>
+                    ¿Tienes un proyecto o quieres adquirir
+                    uno de nuestros productos?
+                    Estamos listos para atenderte.
+                </p>
+
+
+                <div class="contact-item">
+
+                    <strong>
+                        📧 Correo electrónico
+                    </strong>
+
+                    <span>
+                        smithmaykenlunaasencios@gmail.com
+                    </span>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <strong>
+                        📱 WhatsApp
+                    </strong>
+
+                    <span>
+                        +51 951 719 594
+                    </span>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <strong>
+                        📍 Ubicación
+                    </strong>
+
+                    <span>
+                        Huaura - I.E CPPS
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-form">
+
+                <h3>
+                    Envíanos un mensaje
+                </h3>
+
+                <br>
+
+                <form id="contactForm">
+
+
+                    <div
+                        class="form-group"
+                        style="margin-bottom:18px"
+                    >
+
+                        <label>
+                            Nombre
+                        </label>
+
+                        <input
+                            id="contactNombre"
+                            type="text"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div
+                        class="form-group"
+                        style="margin-bottom:18px"
+                    >
+
+                        <label>
+                            Correo
+                        </label>
+
+                        <input
+                            id="contactCorreo"
+                            type="email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div
+                        class="form-group"
+                        style="margin-bottom:18px"
+                    >
+
+                        <label>
+                            Mensaje
+                        </label>
+
+                        <textarea
+                            id="contactMensaje"
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary"
+                    >
+                        Enviar por WhatsApp
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-grid">
+
+
+        <div>
+
+            <div class="footer-logo">
+
+                METALUX<span>_PAGE</span>
+
+            </div>
+
+            <p>
+                DIGITALIZANDO FUTURO CON CALIDAD Y PRECISIÓN.
+            </p>
+
+            <p style="margin-top:10px">
+
+                Fabricación de productos metálicos,
+                soldadura y soluciones personalizadas.
+
+            </p>
+
+        </div>
+
+
+        <div class="footer-col">
+
+            <h3>
+                Navegación
+            </h3>
+
+            <a href="#inicio">
+                Inicio
+            </a>
+
+            <a href="#nosotros">
+                Nosotros
+            </a>
+
+            <a href="#servicios">
+                Servicios
+            </a>
+
+            <a href="#catalogo">
+                Catálogo
+            </a>
+
+            <a href="#porque">
+                ¿Por qué elegirnos?
+            </a>
+
+        </div>
+
+
+        <div class="footer-col">
+
+            <h3>
+                Contacto
+            </h3>
+
+            <a href="mailto:smithmaykenlunaasencios@gmail.com">
+                Correo electrónico
+            </a>
+
+            <a
+                href="https://wa.me/51951719594"
+                target="_blank"
+            >
+                WhatsApp
+            </a>
+
+            <a href="#contacto">
+                Contáctanos
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="copy">
+
+        © 2026 METALUX_PAGE.
+        Todos los derechos reservados.
+
+    </div>
+
+</footer>
+
+
+<!-- ================= BOTON WHATSAPP ================= -->
+
+<a
+    href="https://wa.me/51951719594?text=Hola%20METALUX_PAGE,%20quiero%20información."
+    target="_blank"
+    class="float-wa"
+    aria-label="Contactar por WhatsApp"
+>
+    ☎
+</a>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+    /* PUBLICAR PRODUCTO */
+
+    document
+    .getElementById("publishForm")
+    .addEventListener("submit", function(e) {
+
+        e.preventDefault();
+
+        const nombre =
+            document.getElementById("nombre").value;
+
+        const correo =
+            document.getElementById("correo").value;
+
+        const whatsapp =
+            document.getElementById("whatsapp").value;
+
+        const producto =
+            document.getElementById("producto").value;
+
+        const categoria =
+            document.getElementById("categoria").value;
+
+        const precio =
+            document.getElementById("precio").value;
+
+        const descripcion =
+            document.getElementById("descripcion").value;
+
+        const ubicacion =
+            document.getElementById("ubicacion").value;
+
+
+        const mensaje =
+            "Hola METALUX_PAGE.%0A%0A" +
+
+            "Quiero publicar un producto en el catálogo.%0A%0A" +
+
+            "Nombre: " +
+            encodeURIComponent(nombre) +
+            "%0A" +
+
+            "Correo: " +
+            encodeURIComponent(correo) +
+            "%0A" +
+
+            "WhatsApp: " +
+            encodeURIComponent(whatsapp) +
+            "%0A" +
+
+            "Producto: " +
+            encodeURIComponent(producto) +
+            "%0A" +
+
+            "Categoría: " +
+            encodeURIComponent(categoria) +
+            "%0A" +
+
+            "Precio: S/ " +
+            encodeURIComponent(precio) +
+            "%0A" +
+
+            "Descripción: " +
+            encodeURIComponent(descripcion) +
+            "%0A" +
+
+            "Ubicación: " +
+            encodeURIComponent(ubicacion);
+
+
+        window.open(
+            "https://wa.me/51951719594?text=" + mensaje,
+            "_blank"
+        );
+
+    });
+
+
+    /* FORMULARIO DE CONTACTO */
+
+    document
+    .getElementById("contactForm")
+    .addEventListener("submit", function(e) {
+
+        e.preventDefault();
+
+
+        const nombre =
+            document.getElementById("contactNombre").value;
+
+        const correo =
+            document.getElementById("contactCorreo").value;
+
+        const mensajeTexto =
+            document.getElementById("contactMensaje").value;
+
+
+        const mensaje =
+
+            "Hola METALUX_PAGE.%0A%0A" +
+
+            "Nombre: " +
+            encodeURIComponent(nombre) +
+            "%0A" +
+
+            "Correo: " +
+            encodeURIComponent(correo) +
+            "%0A%0A" +
+
+            "Mensaje:%0A" +
+
+            encodeURIComponent(mensajeTexto);
+
+
+        window.open(
+            "https://wa.me/51951719594?text=" + mensaje,
+            "_blank"
+        );
+
+    });
+
+</script>
+
+</body>
+</html>
